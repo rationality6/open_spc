@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open SPC</title>
+
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- vue.js 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <div>
+      <img class="w-10 h-10" :src=spcLogo alt="">
+    </div>
+
+    <div v-for="brand in spcBrands" class="m-3 flex">
+      <div class="m-3 rounded overflow-hidden border lg:w-2/12 md:w-2/12 bg-white mx-3 md:mx-0 lg:mx-0">
+
+        <div class="w-full flex justify-between p-3">
+          <div class="flex">
+            <span class="ml-2 font-bold text-sm">{{brand.name}}</span>
+          </div>
+          <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i
+              class="fas fa-ellipsis-h pt-2 text-lg"></i></span>
+        </div>
+
+        <img class="w-full bg-cover p-3" :src=brand.logo_url_1 />
+        <img class="w-full bg-cover p-3" :src=brand.logo_url_2 />
+
+        <div class="px-3 pb-2">
+          <div class="pt-2">
+            <i class="far fa-heart cursor-pointer"></i>
+            <span class="text-sm text-gray-400 font-medium">뭘 파니?</span>
+            <span class="text-sm text-gray-500 font-medium">{{brand.selling}}</span>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data: {
+        spcLogo: "./images/logos/spc_logo.png",
+        spcBrands: [{
+            name: "파리바게트",
+            logo_url_1: "./images/logos/paris_baguette_logo.png",
+            logo_url_2: "./images/logos/paris_02.jpg",
+            selling: "빵"
+          },
+          {
+            name: "베스킨라빈스",
+            logo_url: "",
+            selling: "아이스크림"
+          },
+          {
+            name: "베라 피자",
+            logo_url: "",
+            selling: "피자"
+          }
+        ],
+
+      },
+      created() {
+        // this.spc_brands.forEach((brand) => {
+        //   Vue.set(card, 'isFlipped', false)
+        // });
+
+        // var cards1 = _.cloneDeep(this.cards);
+        // var cards2 = _.cloneDeep(this.cards);
+
+        // this.memoryCards = _.shuffle(this.memoryCards.concat(cards1, cards2));
+      },
+
+      methods: {
+        // flipCard(card) {
+
+        // },
+      }
+    });
+  </script>
+</body>
+
+</html>
