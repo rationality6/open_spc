@@ -25,7 +25,7 @@
     <div class="m-3 flex flex-wrap">
 
       <div v-for="brand in spcBrands"
-        class="my-1 rounded overflow-hidden border lg:max-w-sm lg:w-2/12 md:w-2/12 bg-white mx-3">
+        class="my-1 rounded overflow-hidden border w-5/12 lg:max-w-sm lg:w-2/12 md:w-2/12 bg-white mx-3">
 
         <div class="w-full flex justify-between p-3">
           <div class="flex">
@@ -62,67 +62,69 @@
       el: '#app',
       data: {
         spcLogo: "./images/logos/spc_logo.png",
-        spcBrands: [{
+        spcBrands: [
+          // 베이커리_디저트
+          {
             name: "파리바게트",
             logo_url: "./images/logos/paris_baguette_logo.png",
             selling: "빵",
-            type: "",
-            corporation_name: ""
+            type: "베이커리_디저트",
+            corporation_name: "(주)파리크라상"
           },
           {
-            name: "베스킨라빈스",
-            logo_url: "",
+            name: "배스킨라빈스",
+            logo_url: "./images/logos/baskin_robbins_logo.png",
             selling: "아이스크림",
-            type: "",
-            corporation_name: ""
+            type: "베이커리_디저트",
+            corporation_name: "비알코리아(주)"
           },
           {
-            name: "베라 피자",
-            logo_url: "",
+            name: "베라",
+            logo_url: "./images/logos/vera_pizza_and_pasta_logo.png",
             selling: "피자",
             type: "",
-            corporation_name: "",
+            corporation_name: "(주)파리크라상",
           },
-
+          // 커피_음료
           {
             name: "파스쿠찌",
-            logo_url: "",
-            selling: "",
-            type: "유통_서비스",
+            logo_url: "./images/logos/pascucci_logo.png",
+            selling: "커피",
+            type: "커피_음료",
             corporation_name: "(주)섹타나인",
           },
           {
             name: "잠바주스",
-            logo_url: "",
-            selling: "",
-            type: "유통_서비스",
+            logo_url: "./images/logos/jamba_logo.png",
+            selling: "주스",
+            type: "커피_음료",
             corporation_name: "(주)섹타나인",
           },
           {
             name: "커피앳웍스",
-            logo_url: "",
+            logo_url: "./images/logos/coffee_and_works_logo.png",
             selling: "",
-            type: "유통_서비스",
+            type: "커피_음료",
             corporation_name: "(주)파리크라상",
           },
           {
             name: "티트라",
             logo_url: "./images/logos/teatra.png",
             selling: "",
-            type: "유통_서비스",
+            type: "커피_음료",
             corporation_name: "(주)섹타나인",
           },
-
+          // 유통_서비스
           {
             name: "해피포인트",
-            logo_url: "",
+            logo_url: "./images/logos/happy_point.png",
             selling: "",
             type: "유통_서비스",
             corporation_name: "(주)섹타나인",
           },
           {
             name: "더월드바인",
-            logo_url: "",
+            logo_url: "./images/logos/the_world_vine.png",
             selling: "",
             type: "유통_서비스",
             corporation_name: "(주)타이거인터내셔널",
@@ -143,6 +145,9 @@
 
       methods: {
         // flipCard(card) {
+
+        // },
+        // search(card) {
 
         // },
       }
