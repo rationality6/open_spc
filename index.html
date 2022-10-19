@@ -18,34 +18,40 @@
 
   <div id="app">
 
-    <div>
-      <img class="w-10 h-10" :src=spcLogo alt="">
+    <div class="my-7 h-14 w-full flex justify-center items-center">
+      <img class="w-14 h-14" :src=spcLogo alt="">
     </div>
 
-    <div v-for="brand in spcBrands" class="m-3 flex">
-      <div class="m-3 rounded overflow-hidden border lg:w-2/12 md:w-2/12 bg-white mx-3 md:mx-0 lg:mx-0">
+    <div class="m-3 flex flex-wrap">
+
+      <div v-for="brand in spcBrands"
+        class="my-1 rounded overflow-hidden border lg:max-w-sm lg:w-2/12 md:w-2/12 bg-white mx-3">
 
         <div class="w-full flex justify-between p-3">
           <div class="flex">
-            <span class="ml-2 font-bold text-sm">{{brand.name}}</span>
+            <span class="ml-2 font-bold text-sm">
+              {{brand.name}}
+            </span>
           </div>
-          <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i
-              class="fas fa-ellipsis-h pt-2 text-lg"></i></span>
+          <span class="px-2 hover:bg-gray-300 cursor-pointer rounded">
+            <i class="fas fa-ellipsis-h pt-2 text-lg"></i>
+          </span>
         </div>
 
-        <img class="w-full bg-cover p-3" :src=brand.logo_url_1 />
-        <img class="w-full bg-cover p-3" :src=brand.logo_url_2 />
+        <img class="w-full bg-cover p-3" :src=brand.logo_url />
 
         <div class="px-3 pb-2">
           <div class="pt-2">
             <i class="far fa-heart cursor-pointer"></i>
-            <span class="text-sm text-gray-400 font-medium">뭘 파니?</span>
-            <span class="text-sm text-gray-500 font-medium">{{brand.selling}}</span>
+            <span class="text-sm text-gray-400 font-medium">
+              뭘 파니?
+            </span>
+            <span class="text-sm text-gray-500 font-medium">
+              {{brand.selling}}
+            </span>
           </div>
         </div>
-
       </div>
-
 
     </div>
 
@@ -58,20 +64,69 @@
         spcLogo: "./images/logos/spc_logo.png",
         spcBrands: [{
             name: "파리바게트",
-            logo_url_1: "./images/logos/paris_baguette_logo.png",
-            logo_url_2: "./images/logos/paris_02.jpg",
-            selling: "빵"
+            logo_url: "./images/logos/paris_baguette_logo.png",
+            selling: "빵",
+            type: "",
+            corporation_name: ""
           },
           {
             name: "베스킨라빈스",
             logo_url: "",
-            selling: "아이스크림"
+            selling: "아이스크림",
+            type: "",
+            corporation_name: ""
           },
           {
             name: "베라 피자",
             logo_url: "",
-            selling: "피자"
-          }
+            selling: "피자",
+            type: "",
+            corporation_name: "",
+          },
+
+          {
+            name: "파스쿠찌",
+            logo_url: "",
+            selling: "",
+            type: "유통_서비스",
+            corporation_name: "(주)섹타나인",
+          },
+          {
+            name: "잠바주스",
+            logo_url: "",
+            selling: "",
+            type: "유통_서비스",
+            corporation_name: "(주)섹타나인",
+          },
+          {
+            name: "커피앳웍스",
+            logo_url: "",
+            selling: "",
+            type: "유통_서비스",
+            corporation_name: "(주)파리크라상",
+          },
+          {
+            name: "티트라",
+            logo_url: "./images/logos/teatra.png",
+            selling: "",
+            type: "유통_서비스",
+            corporation_name: "(주)섹타나인",
+          },
+
+          {
+            name: "해피포인트",
+            logo_url: "",
+            selling: "",
+            type: "유통_서비스",
+            corporation_name: "(주)섹타나인",
+          },
+          {
+            name: "더월드바인",
+            logo_url: "",
+            selling: "",
+            type: "유통_서비스",
+            corporation_name: "(주)타이거인터내셔널",
+          },
         ],
 
       },
