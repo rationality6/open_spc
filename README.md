@@ -12,6 +12,7 @@ https://rationality6.github.io/open_spc/
 
 
 
+<img width="1210" alt="Screen Shot 2022-10-21 at 11 08 42 AM" src="https://user-images.githubusercontent.com/3889468/197094875-376606eb-0197-4e7f-a2ae-8c1941ced1c9.png">
 
 
 생각 메모
