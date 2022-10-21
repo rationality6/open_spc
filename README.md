@@ -8,6 +8,11 @@ spc 제품이 알고싶어요
 남양 우유와 SPC 빵이면 된거 같아요.
 
 
+https://rationality6.github.io/open_spc/
+
+
+
+
 
 생각 메모
 
